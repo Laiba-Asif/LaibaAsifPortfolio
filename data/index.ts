@@ -1,7 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -23,7 +22,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "",
+    img: "/globe.png",
     spareImg: "",
   },
   {
@@ -72,27 +71,27 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Real Estate App where you can easily find best place to live",
+    des: "Developed a dynamic real estate frontend application using React and SCSS, enhancing user experience with responsive design and efficient component architecture.",
+    img: "/project-1.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/scss.svg"],
+    link: "https://github.com/Laiba-Aapa/real-estate-frontend",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
+    title: "Tic Tac Toe ",
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    img: "/project-2.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://tic-tac-toe-laiba.netlify.app/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
+    title: "NextLevelFood Community sharing recipe over the internet.",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    img: "project-3.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    link: "https://nextlevelfoodies.vercel.app/",
   },
   {
     id: 4,
@@ -205,13 +204,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link:"https://github.com/Laiba-Aapa",
   },
+  
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/link.svg",
+    link:"https://www.linkedin.com/in/laiba-asif-742b07247/",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/whatsapp.png",
+    link:"https://wa.me/03176481367",
   },
 ];

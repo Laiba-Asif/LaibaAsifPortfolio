@@ -12,14 +12,14 @@ const Approach = () => {
             </h1>
             <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4 ">
                 <Card title="Planning & strategy" icon={<AceternityIcon order='Phase 1'
-                    description="I'll collaborate to your website's goals, target audience and key functionalities. We'll descuss things like site structure , navigation and content requirements."
-                />}>
+
+                />} description="I'll collaborate to your website's goals, target audience and key functionalities. We'll descuss things like site structure , navigation and content requirements.">
                     <CanvasRevealEffect
                         animationSpeed={5.1}
                         containerClassName="bg-emerald-900"
                     />
                 </Card>
-                <Card title="Development & process Update" icon={<AceternityIcon order="Phase 2" description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial Sketchers to polished code, I keep you updated every step of the way." />}>
+                <Card title="Development & process Update" icon={<AceternityIcon order="Phase 2" />} description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial Sketchers to polished code, I keep you updated every step of the way.">
                     <CanvasRevealEffect
                         animationSpeed={3}
                         containerClassName="bg-black"
@@ -32,7 +32,7 @@ const Approach = () => {
                     {/* Radial gradient for the cute fade */}
                     <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
                 </Card>
-                <Card title="Development & Launch" icon={<AceternityIcon order="Phase 3" description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up" />}>
+                <Card title="Development & Launch" icon={<AceternityIcon order="Phase 3" />} description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up">
                     <CanvasRevealEffect
                         animationSpeed={3}
                         containerClassName="bg-sky-600"

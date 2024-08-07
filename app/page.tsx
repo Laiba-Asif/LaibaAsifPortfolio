@@ -19,9 +19,11 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
-        <Clients />
-        <Experience />
-        <Approach />
+        {/* will add clients when have testimonial and clients/companies */}
+        {/* <Clients /> */}
+        {/* will add experiences after once i'll have them */}
+        {/* <Experience /> */}
+        {/* <Approach /> */}
         <Footer />
 
       </div>

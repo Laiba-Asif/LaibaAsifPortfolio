@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
+// import GlobeDemo from './GridGlobe'
 
 // Also install this npm i --save-dev @types/react-lottie
 // import Lottie from "react-lottie";
@@ -128,7 +129,7 @@ export const BentoGridItem = ({
                     </div>
 
                     {/* for the github 3d globe */}
-                    {id === 2 && <GlobeDemo />}
+                    {/* {id === 2 && <img src='/globe.png' alt='globe img' />} */}
 
                     {/* Tech stack list div */}
                     {id === 3 && (
