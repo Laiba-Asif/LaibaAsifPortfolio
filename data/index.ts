@@ -1,4 +1,5 @@
 export const navItems = [
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
@@ -72,7 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Real Estate App where you can easily find best place to live",
-    des: "Developed a dynamic real estate frontend application using React and SCSS, enhancing user experience with responsive design and efficient component architecture.",
+    des: "Developed a dynamic real estate frontend application using React, Node Js and SCSS, enhancing user experience with responsive design and efficient component architecture.",
     img: "/project-1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/scss.svg"],
     link: "https://github.com/Laiba-Aapa/real-estate-frontend",
@@ -80,7 +81,7 @@ export const projects = [
   {
     id: 2,
     title: "Tic Tac Toe ",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    des: "Simple Tic Tac Toe Game developed via React Hooks. ",
     img: "/project-2.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
     link: "https://tic-tac-toe-laiba.netlify.app/",
@@ -88,18 +89,42 @@ export const projects = [
   {
     id: 3,
     title: "NextLevelFood Community sharing recipe over the internet.",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    des: "An app where you can get recipies of your favourite food and also share. You can easily share images. Also you can joun the community. Project developed via Next Js and Node Js. ",
     img: "project-3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
     link: "https://nextlevelfoodies.vercel.app/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "3D images slider",
+    des: "3D infinite images slider developed with HTML and CSS animation and maths coordinates.",
+    img: "/project-4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "https://github.com/Laiba-Aapa/CSS-3D-Slider-",
+  },
+  {
+    id: 5,
+    title: "Weather Forecasting ",
+    des: "Get Weather update of any city of any country, developed with openWeather Api , using HTML CSS Javascript React and Fetch API. ",
+    img: "/project-5.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://weather-forcasting-app-six.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "Typing speed Testing ",
+    des: "Here you can test your typing speed easily. It will show you the scores you earned.developed using HTML CSS Javascript and React",
+    img: "/project-6.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://typing-speed-test-psi-one.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Piano Game",
+    des: "Play Piano Game with keyboard, the keys demonstrated on the piano. Developed via simple HTML CSS Javascript and React.",
+    img: "/project-6.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://pianoplay.vercel.app/",
   },
 ];
 
