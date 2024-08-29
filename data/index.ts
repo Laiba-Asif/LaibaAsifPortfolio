@@ -50,7 +50,7 @@ export const gridItems = [
   {
     id: 5,
 <<<<<<< HEAD
-    title: "Currently building a Full Stack Student management System",
+    title: "Currently building a AI powered Resume builder with React.",
 =======
     title: "Currently building a Full Stack Student Management System ",
 >>>>>>> 45bae6a50554c941c58852c96b64e3e4c698a6ce
