@@ -84,11 +84,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Tic Tac Toe ",
-    des: "Simple Tic Tac Toe Game developed via React Hooks. ",
+    title: "Student Management System ",
+    des: "school management by organizing classes, managing students and faculty, tracking attendance, assessing performance, and facilitating communication",
     img: "/project-2.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://tic-tac-toe-laiba.netlify.app/",
+    link: "https://student-management-system-laibae.vercel.app/",
   },
   {
     id: 3,
@@ -129,6 +129,22 @@ export const projects = [
     img: "/project-7.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://pianoplay.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "Tic Tac Toe ",
+    des: "Simple Tic Tac Toe Game developed via React Hooks. ",
+    img: "/project-8.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://tic-tac-toe-laiba.netlify.app/",
+  },
+  {
+    id: 9,
+    title: "Starbucks Animated Slider",
+    des: "Simple Starbucks Animated Slider build with HTML CSS and Javascript. ",
+    img: "/project-9.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://starbucks-animated-slider.vercel.app/",
   },
 ];
 
