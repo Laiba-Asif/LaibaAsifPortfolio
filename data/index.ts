@@ -1,9 +1,6 @@
-export const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
-];
+import { toNamespacedPath } from "path";
+
+
 
 export const gridItems = [
   {
@@ -73,78 +70,149 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+
+
+
+export const myProjects = [
   {
     id: 1,
-    title: "Real Estate App where you can easily find best place to live",
-    des: "Developed a dynamic real estate frontend application using React, Node Js and SCSS, enhancing user experience with responsive design and efficient component architecture.",
-    img: "/project-1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/scss.svg"],
-    link: "https://github.com/Laiba-Aapa/real-estate-frontend",
+    category: "Full Stack",
+    projects: [
+     {
+        name: "Zoom Clone",
+        des: "A video conferencing web application to do video calling alongside screen sharing. I developed this using Next 14 and used clerk for authentication and Stream React video SDK for video calling.",
+        img: "/zoom.png",
+        github: "https://github.com/Laiba-Asif/Next.Js_zoom-clone",
+        tags: [
+          { name: "goLive", color: "blue-text-gradient" ,link:"https://zoom-by-laiba.vercel.app/"},
+          { name: "github", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/Next.Js_zoom-clone" },
+        ],
+      },
+     {
+        name: "Netflix Clone",
+        des: "you can easily watch the trailers of your favourite TV show, movie and get to know about your fav protagonist. Utilized JWT for authentication via Nodejs, Express and Mongodb and TMDB movie api to fetch movies at backend and used React and tailwind css for frontend and axios as well!",
+        img: "/1.png",
+        github: "https://github.com/Laiba-Asif/mern-netflix-clone",
+        tags: [
+          { name: "goLive", color: "pink-text-gradient" ,link:"https://laiba-netflix-clone.vercel.app/"},
+          { name: "github", color: "blue-text-gradient",link:"https://github.com/Laiba-Asif/mern-netflix-clone" },
+        ],
+      },
+      {
+        name: "Real Estate App",
+        des: "Easily find the best place to live. Developed a dynamic real estate frontend application using React, Node.js, and SCSS, enhancing user experience with responsive design and efficient component architecture.",
+        img: "/project-1.png",
+        github:"https://github.com/Laiba-Asif/Real-Estate-Frontend",
+        tags: [
+          { name: "goLive", color: "green-text-gradient" ,link:"https://real-estate-laiba.vercel.app/"},
+          { name: "github", color: "pink-text-gradient",link:"https://github.com/Laiba-Asif/Real-Estate-Frontend" },,
+        ],
+        
+      },
+    ],
   },
   {
     id: 2,
-    title: "Student Management System ",
-    des: "school management by organizing classes, managing students and faculty, tracking attendance, assessing performance, and facilitating communication",
-    img: "/project-2.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://student-management-system-laibae.vercel.app/",
+    category: "Frontend",
+    projects: [
+     
+      {
+        name: "Student Management System",
+        des: "School management system for organizing classes, managing students and faculty, tracking attendance, assessing performance, and facilitating communication.",
+        img: "/project-2.png",
+        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+        link: "https://student-management-system-laibae.vercel.app/",
+        github: "https://github.com/Laiba-Asif/Student-Management-System",
+        tags: [
+          { name: "goLive", color: "blue-text-gradient" ,link:"https://student-management-system-laibae.vercel.app/"},
+          { name: "github", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/Student-Management-System" },
+        ],
+      },
+      {
+        name: "NextLevelFood Community",
+        des: "An app to get and share recipes of your favorite food. Features community interaction and image sharing. Developed using Next.js and Node.js.",
+        img: "/project-3.png",
+        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+        link: "https://nextlevelfoodies.vercel.app/",
+        github: "https://github.com/Laiba-Asif/Nextlevel-foodies-community",
+        tags: [
+          { name: "goLive", color: "pink-text-gradient",link:"https://nextlevelfoodies.vercel.app/" },
+          { name: "github", color:"blue-text-gradient" ,link:"https://github.com/Laiba-Asif/Nextlevel-foodies-community" },
+        ],
+      },
+       {
+        name: "Weather Forecasting",
+        des: "Get weather updates for any city worldwide. Developed using OpenWeather API, HTML, CSS, JavaScript, React, and Fetch API.",
+        img: "/project-5.png",
+        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+        link: "https://weather-forcasting-app-six.vercel.app/",
+        github: "https://github.com/Laiba-Asif/Weather-Forcasting-App",
+        tags: [
+          { name: "goLive", color: "pink-text-gradient",link:"https://weather-forcasting-app-six.vercel.app/" },
+          { name: "github", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/Weather-Forcasting-App" },
+        ],
+      },
+      {
+        name: "Typing Speed Testing",
+        des: "Test your typing speed with score tracking. Developed using HTML, CSS, JavaScript, and React.",
+        img: "/project-6.png",
+        link: "https://typing-speed-test-psi-one.vercel.app/",
+        github: "https://github.com/Laiba-Asif/Typing-speed-test",
+        tags: [
+          { name: "golive", color: "green-text-gradient",link:"https://typing-speed-test-psi-one.vercel.app/"},
+          { name: "github", color: "blue-text-gradient" ,link:"https://github.com/Laiba-Asif/Typing-speed-test" },
+        ],
+      },
+      {
+        name: "Piano Game",
+        des: "Play a piano game with keyboard controls. Keys are demonstrated on the piano. Developed using HTML, CSS, JavaScript, and React.",
+        img: "/project-7.png",
+        link: "https://pianoplay.vercel.app/",
+        github: "https://github.com/Laiba-Asif/Piano-Game",
+        tags: [
+          { name: "goLive", color: "pink-text-gradient" ,link:"https://pianoplay.vercel.app/" },
+          { name: "github", color: "green-text-gradient" ,link:"https://github.com/Laiba-Asif/Piano-Game" },
+          
+        ],
+      },
+      {
+        name: "Tic Tac Toe",
+        des: "A simple Tic Tac Toe game developed using React Hooks and CSS.",
+        img: "/project-8.png",
+        github: "https://github.com/Laiba-Asif/tic-tac-toe-Game",
+        tags: [
+          { name: "goLive", color: "blue-text-gradient",link:"https://tic-tac-toe-laiba.netlify.app/" },
+          { name: "github", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/tic-tac-toe-Game" },
+          
+        ],
+      },
+    ],
   },
   {
     id: 3,
-    title: "NextLevelFood Community sharing recipe over the internet.",
-    des: "An app where you can get recipies of your favourite food and also share. You can easily share images. Also you can joun the community. Project developed via Next Js and Node Js. ",
-    img: "project-3.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
-    link: "https://nextlevelfoodies.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "3D images slider",
-    des: "3D infinite images slider developed with HTML and CSS animation and maths coordinates.",
-    img: "/project-4.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/Laiba-Aapa/CSS-3D-Slider-",
-  },
-  {
-    id: 5,
-    title: "Weather Forecasting ",
-    des: "Get Weather update of any city of any country, developed with openWeather Api , using HTML CSS Javascript React and Fetch API. ",
-    img: "/project-5.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://weather-forcasting-app-six.vercel.app/",
-  },
-  {
-    id: 6,
-    title: "Typing speed Testing ",
-    des: "Here you can test your typing speed easily. It will show you the scores you earned.developed using HTML CSS Javascript and React",
-    img: "/project-6.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://typing-speed-test-psi-one.vercel.app/",
-  },
-  {
-    id: 7,
-    title: "Piano Game",
-    des: "Play Piano Game with keyboard, the keys demonstrated on the piano. Developed via simple HTML CSS Javascript and React.",
-    img: "/project-7.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://pianoplay.vercel.app/",
-  },
-  {
-    id: 8,
-    title: "Tic Tac Toe ",
-    des: "Simple Tic Tac Toe Game developed via React Hooks. ",
-    img: "/project-8.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://tic-tac-toe-laiba.netlify.app/",
-  },
-  {
-    id: 9,
-    title: "Starbucks Animated Slider",
-    des: "Simple Starbucks Animated Slider build with HTML CSS and Javascript. ",
-    img: "/project-9.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
-    link: "https://starbucks-animated-slider.vercel.app/",
+    category: "Vanilla Js",
+    projects: [
+      {
+        name: "3D Images Slider",
+        des: "A 3D infinite image slider developed with HTML, CSS animations, and maths coordinates.",
+        img: "/project-4.png",
+        github: "https://github.com/Laiba-Asif/CSS-3D-Slider-",
+        tags: [
+          { name: "goLive", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/CSS-3D-Slider-" },
+          { name: "github", color: "blue-text-gradient",link:"https://github.com/Laiba-Asif/CSS-3D-Slider-" },
+        ],
+      },
+      {
+        name: "Starbucks Animated Slider",
+        des: "A Starbucks-themed animated slider built using HTML, CSS, and JavaScript.",
+        img: "/project-9.png",
+        github: "https://github.com/Laiba-Asif/Starbucks-animated-slider",
+        tags: [
+          { name: "goLive", color: "pink-text-gradient" ,link:"https://starbucks-animated-slider.vercel.app/"},
+          { name: "github", color: "green-text-gradient",link:"https://github.com/Laiba-Asif/Starbucks-animated-slider" },
+        ],
+      },
+    ],
   },
 ];
 
@@ -249,17 +317,34 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link:"https://github.com/Laiba-Aapa",
+    link:"https://github.com/Laiba-Asif",
   },
   
   {
     id: 2,
     img: "/link.svg",
-    link:"https://www.linkedin.com/in/laiba-asif-742b07247/",
+    link:"https://www.linkedin.com/in/laibae-awan/",
   },
   {
     id: 3,
     img: "/whatsapp.png",
-    link:"https://wa.me/03176481367",
+    link:"https://wa.me/+923296263929",
+  },
+];
+
+export const certification = [
+  {
+    id: 1,
+    title: "React Basics",
+    desc: "React js, SPA, React Hooks, ContextApi, Redux, UI, Git, Github, Debugging, Responsive Web Application ",
+    thumbnail: "/company/meta.png",
+    link:"https://www.coursera.org/account/accomplishments/verify/28FX7ZD3M233"
+  },
+  {
+    id: 2,
+    title: "Progrmming with javascript",
+    desc: "Javascript, Asynchronous code, Js Modules, Array Destructuring, Spread Operator, Data Structure",
+    thumbnail: "/company/meta.png",
+    link:"https://www.coursera.org/account/accomplishments/verify/AYTASXQVRLVK"
   },
 ];

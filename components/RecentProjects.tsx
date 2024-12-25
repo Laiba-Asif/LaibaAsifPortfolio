@@ -1,47 +1,100 @@
-import { projects } from '@/data'
+'use client'
 import React from 'react'
-import { PinContainer } from './ui/3d-pin'
-import { FaLocationArrow } from 'react-icons/fa'
+import { myProjects } from '@/data'
+import { fadeIn } from '@/data/motion'
+import { motion } from 'framer-motion'
+import { Tilt } from 'react-tilt'
 
 const RecentProjects = () => {
+    console.log(myProjects)
     return (
         <div className='py-20' id='projects'>
             <h1 className="heading">
                 A small selection of {''}
                 <span className='text-purple'>Recent Projects</span>
             </h1>
-            <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-4 mt-10">
+            <div className=" py-4 mt-10 w-full  mx-auto">
                 {
-                    projects.map(({ id, title, des, img, iconLists, link }) => (
-                        <div key={id} className='sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw] '>
-                            <PinContainer title={link} href={link}>
-                                <div className='flex items-center justify-center relative sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10 lg:w-[500px]'>
-                                    <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
-                                        <img src='/bg.png' alt="bg img" />
-                                    </div>
-                                    <img src={img} alt={title} className='z-10 absolute bottom-0 ' />
-                                </div>
-                                <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>{title}</h1>
-                                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-3">{des}</p>
-                                <div className="flex items-center justify-between mt-7 mb-3">
-                                    <div className="flex items-center">
-                                        {iconLists.map((icon, index) => (
-                                            <div key={icon} className='border border-white/[0.2 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center' style={{ transform: `translateX(-${5 * index * 2}px)` }}>
-                                                <img src={icon} alt={icon} className='p-2' />
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className='flex justify-center items-center'>
+                    myProjects.map((projects) => (
+                        <div key={projects.id} className='flex flex-col gap-4 mb-4'>
 
-                                        <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
-                                        <FaLocationArrow className='ms-3' color='#cbacf9' />
-                                    </div>
-                                </div>
-                            </PinContainer>
+                            <div className="flex items-center  gap-4">
+                                <span className="h-[2px] w-[50px] bg-purple  opacity-[70%]"></span>
+                                <p className='uppercase text-base tracking-most text-white'>{projects.category}</p>
+
+
+                            </div>
+                            {/* projects */}
+
+                            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 z-20">
+                                {projects.projects.map((project, idx) => (
+                                    <motion.div
+                                        variants={fadeIn("up", "spring", idx * 0.5, 0.75)}
+                                        key={idx}
+                                        className="flex"
+                                    >
+                                        <Tilt
+                                            options={{ max: 45, scale: 1, speed: 450 }}
+                                            className="bg-tertiary p-5 rounded-2xl w-full z-10 flex flex-col"
+                                        >
+                                            <div className="relative w-full h-[230px]">
+                                                <img
+                                                    src={project.img}
+                                                    alt={project.name}
+                                                    className="w-full h-full object-cover rounded-2xl"
+                                                />
+                                                <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                                                    <div
+                                                        onClick={() => window.open(project.github, "_black")}
+                                                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                                                    >
+                                                        <img
+                                                            src="/github.png"
+                                                            alt="github"
+                                                            className="w-1/2 h-1/2 object-contain"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mt-5 flex-1">
+                                                <h3 className="text-white font-bold text-[24px]">{project.name}</h3>
+
+                                                <div className="relative group">
+                                                    <p className="mt-2 text-white-200 text-[14px]">
+                                                        {project.des.length > 120 ? project.des.slice(0, 120) + "..." : project.des}
+                                                    </p>
+                                                    {project.des.length > 120 && (
+                                                        <>
+                                                            {/* Tooltip */}
+                                                            <div className="absolute left-1/2 top-full z-50 w-72 p-4 text-sm text-white bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 bg-opacity-70 backdp-blur-md rounded-lg shadow-xl transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition-opacity duration-300 ease-in-out">
+                                                                <p className="text-center">{project.des}</p>
+                                                            </div>
+                                                        </>
+                                                    )}
+                                                </div>
+
+
+
+                                            </div>
+                                            <div className="mt-4 flex flex-wrap gap-2">
+                                                {project.tags.map((tag) => (
+                                                    <p onClick={() => window.open(tag.link, "_black")} key={tag.name} className={`text-14px cursor-pointer ${tag.color}`}>
+                                                        #{tag.name}
+                                                    </p>
+                                                ))}
+                                            </div>
+                                        </Tilt>
+                                    </motion.div>
+                                ))}
+                            </div>
+
                         </div>
                     ))
                 }
             </div >
+
+
+
         </div >
     )
 }
