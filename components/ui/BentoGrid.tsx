@@ -128,14 +128,11 @@ export const BentoGridItem = ({
                         {title}
                     </div>
 
-                    {/* for the github 3d globe */}
-                    {/* {id === 2 && <img src='/globe.png' alt='globe img' />} */}
-
                     {/* Tech stack list div */}
                     {id === 3 && (
                         <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
                             <div className="flex flex-col gap-3 lg:gap-4">
-                                {['ReactJs', 'NextJs', 'TypeScript'].map((item) => (
+                                {['NestJs', 'MERN', 'AI'].map((item) => (
                                     <span key={item} className="py-2 lg:py-2 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]">{item}</span>
 
                                 ))}
@@ -143,7 +140,7 @@ export const BentoGridItem = ({
                             </div>
                             <div className="flex flex-col gap-3 lg:gap-4">
                                 <span className="py-4 px-3 roundedd-lg text-center bg-[#10132e]" />
-                                {['Express', 'MongoDb', 'NodeJs'].map((item) => (
+                                {['React Native', 'NoSql', 'NextJs'].map((item) => (
                                     <span key={item} className="py-2 lg:py-2 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]">{item}</span>
 
                                 ))}

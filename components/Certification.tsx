@@ -2,10 +2,11 @@
 import { certification } from '@/data';
 import React from 'react'
 import { Button } from './ui/MovingBorders'
-
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 const Certification = () => {
     return (
-        <div className="py-20 w-full">
+        <div className="py-10 w-full container">
             <h1 className="heading">
                 My <span className="text-purple">Certification</span>
             </h1>
@@ -32,13 +33,28 @@ const Certification = () => {
                                 className=" md:w-20 w-16"
                             />
                             <div className="lg:ms-5">
-                                <h1 onClick={() => window.open(card.link, "_blank")} className="text-start text-xl md:text-2xl font-bold cursor-pointer">
+                                {/* Add a unique id to the element for anchoring the tooltip */}
+                                <h1
+                                    id="verify-tooltip" // Assign a unique id
+                                    onClick={() => window.open(card.link, "_blank")}
+                                    className="text-start text-xl md:text-2xl font-bold cursor-pointer"
+                                >
                                     {card.title}
                                 </h1>
+
+                                {/* Tooltip component referencing the same id */}
+                                <Tooltip
+                                    anchorId="verify-tooltip"
+                                    content="Verify"
+                                    place="bottom"
+                                    style={{ backgroundColor: "black", color: "white", fontSize: "12px" }}
+                                />
+
                                 <p className="text-start text-white-100 mt-3 font-semibold">
                                     {card.desc}
                                 </p>
                             </div>
+
                         </div>
                     </Button>
                 ))}

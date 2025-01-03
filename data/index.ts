@@ -47,7 +47,7 @@ export const gridItems = [
   {
     id: 5,
 
-    title: "Currently building a AI powered Resume builder with React.",
+    title: "Currently building a chat web app and video calling via webRTC.",
 
 
 
@@ -284,32 +284,31 @@ export const companies = [
 
 export const workExperience = [
   {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    title: "React.js Developer",
+    company_name: "2nd Place",
+    icon: '/company/2ndplace(2).png',
+    iconBg: "#E6DEDD",
+    date: "March 2020 - April 2021",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
   },
   {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    title: "Web Developer",
+    company_name: "Elif Technologies",
+    icon: '/company/elif.png',
+    
+    iconBg: "#383E56",
+    date: "March 2020 - April 2021",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
   },
 ];
 
@@ -336,7 +335,7 @@ export const certification = [
   {
     id: 1,
     title: "React Basics",
-    desc: "React js, SPA, React Hooks, ContextApi, Redux, UI, Git, Github, Debugging, Responsive Web Application ",
+    desc: "React, SPA, Hooks, ContextApi, Redux, HOC, UI, Git, Github, Debugging, Responsive Web Application ",
     thumbnail: "/company/meta.png",
     link:"https://www.coursera.org/account/accomplishments/verify/28FX7ZD3M233"
   },

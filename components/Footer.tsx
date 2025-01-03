@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className='w-full pb-10 mb-[100px] md:mb-5 ' id='contact'>
-            <div className='w-full absolute left-0 md:-bottom-72 min-h-96'>
+        <footer className='w-full py-10 mb-[100px] md:mb-5 container' id='contact'>
+            <div className='w-full absolute left-0 md:-bottom-72 min-h-90'>
                 <img src="/footer-grid.svg" alt="grid" className="w-full h-full opacity-50" />
             </div>
             <div className="flex flex-col items-center " >
@@ -26,7 +26,7 @@ const Footer = () => {
                     />
                 </a>
             </div>
-            <div className='flex mt-16 md:flex-row flex-col justify-between items-center '>
+            <div className='flex mt-16 gap-3 md:flex-row flex-col justify-between items-center '>
                 <p className='md:text-base text-sm md:font-normal font-light'>Copyright &copy; 2024 Laiba</p>
                 <div className='flex items-center md:gap-3 gap-6'>
                     {socialMedia.map((profile) => (

@@ -4,11 +4,13 @@ import { myProjects } from '@/data'
 import { fadeIn } from '@/data/motion'
 import { motion } from 'framer-motion'
 import { Tilt } from 'react-tilt'
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const RecentProjects = () => {
     console.log(myProjects)
     return (
-        <div className='py-20' id='projects'>
+        <div className='py-20 container' id='projects'>
             <h1 className="heading">
                 A small selection of {''}
                 <span className='text-purple'>Recent Projects</span>
@@ -26,7 +28,7 @@ const RecentProjects = () => {
                             </div>
                             {/* projects */}
 
-                            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 z-20">
+                            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 ">
                                 {projects.projects.map((project, idx) => (
                                     <motion.div
                                         variants={fadeIn("up", "spring", idx * 0.5, 0.75)}
@@ -65,9 +67,8 @@ const RecentProjects = () => {
                                                     </p>
                                                     {project.des.length > 120 && (
                                                         <>
-                                                            {/* Tooltip */}
-                                                            <div className="absolute left-1/2 top-full z-50 w-72 p-4 text-sm text-white bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 bg-opacity-70 backdp-blur-md rounded-lg shadow-xl transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition-opacity duration-300 ease-in-out">
-                                                                <p className="text-center">{project.des}</p>
+                                                            <div className="absolute left-1/2 top-full z-50 w-72 p-4 text-sm text-white bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 bg-opacity-70 backdp-blur-md rounded-lg shadow-xl transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition-opacity duration-300 ease-in-out text-center">
+                                                                {project.des}
                                                             </div>
                                                         </>
                                                     )}
@@ -75,14 +76,27 @@ const RecentProjects = () => {
 
 
 
+
+
                                             </div>
                                             <div className="mt-4 flex flex-wrap gap-2">
-                                                {project.tags.map((tag) => (
-                                                    <p onClick={() => window.open(tag.link, "_black")} key={tag.name} className={`text-14px cursor-pointer ${tag.color}`}>
-                                                        #{tag.name}
-                                                    </p>
-                                                ))}
+                                                {project.tags.map((tag, index) => {
+                                                    // Check if tag is defined
+                                                    if (!tag) return null;
+
+                                                    return (
+                                                        <p
+                                                            key={`${tag.name}-${index}`}
+                                                            onClick={() => window.open(tag.link || "#", "_blank")}
+                                                            className={`text-14px cursor-pointer ${tag.color || "default-color"}`}
+                                                        >
+                                                            #{tag.name}
+                                                        </p>
+                                                    );
+                                                })}
                                             </div>
+
+
                                         </Tilt>
                                     </motion.div>
                                 ))}

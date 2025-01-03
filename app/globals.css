@@ -97,21 +97,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #4a90e2, #804dee); /* Gradient color */
-  border-radius: 5px; /* Rounded thumb */
+  background: linear-gradient(-90deg, #804dee 0%, rgba(156, 127, 219, 0) 100%); /* Gradient color */
+  border-radius: 2px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    #3a76c4,
-    #804dee
-  ); /* Darker gradient on hover */
+  background: linear-gradient(-90deg, #804dee 0%, rgba(180, 155, 235, 0) 100%) /* Darker gradient on hover */
 }
 
 ::-webkit-scrollbar-track {
   background-color: #000319; /* Track color */
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 /* Edge case for unsupported browsers (fallback styling) */
@@ -192,4 +188,31 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.custom-tooltip {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #6366f1);
+  color: white !important;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Apply transition to each letter */
+.scale-letter {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out, letter-spacing 0.2s ease-in-out;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  /* Adjust line-height to make the text a little taller */
+}
+
+/* On hover, scale the letter up and change letter spacing */
+.scale-letter:hover {
+  transform: scale(1.4);
+  letter-spacing: 0.2em;
 }

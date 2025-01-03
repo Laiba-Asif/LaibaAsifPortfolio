@@ -26,12 +26,9 @@ const config = {
       },
     },
     extend: {
-      // colors: {
-        
-      //   "black-100": "#100d25",
-      //   "black-200": "#090325",
-      //   "white-100": "#f3f3f3",
-      // },
+      fontFamily: {
+        'anton': ['"Anton", sans-serif'],
+      },
       colors: {
         // primary: "#050816",
         // secondary: "#aaa6c3",

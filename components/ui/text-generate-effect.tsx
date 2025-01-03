@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const TextGenerateEffect = ({
@@ -10,43 +9,56 @@ export const TextGenerateEffect = ({
     words: string;
     className?: string;
 }) => {
-    const [scope, animate] = useAnimate();
     let wordsArray = words.split(" ");
-    useEffect(() => {
-        animate(
-            "span",
-            {
-                opacity: 1,
-            },
-            {
-                duration: 2,
-                delay: stagger(0.2),
-            }
-        );
-    }, [scope.current]);
 
+    // Function to return a random color
+    const randomColor = () => {
+        const colors = [
+            { color: '#73d2b7', class: 'text-[#73d2b7]' },
+            { color: '#753db5', class: 'text-[#753db5]' },
+            "text-green-500",
+            { color: '#4acce7', class: 'text-[#4acce7]' },
+            { color: '#ea89b7', class: 'text-[#ea89b7]' },
+            "text-indigo-300",
+            "text-purple",
+            { color: '#ef20a1', class: 'text-[#ef20a1]' },
+        ];
+
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        const color = colors[randomIndex];
+
+        // Check if it's an object with a 'class' property or just a Tailwind class
+        return typeof color === 'object' ? color.class : color;
+    };
+
+    // Function to render each word with different colored letters
     const renderWords = () => {
         return (
-            <motion.div ref={scope}>
+            <div>
                 {wordsArray.map((word, idx) => {
                     return (
-                        <motion.span
-                            key={word + idx}
-                            className={`${idx > 3 ? 'text-purple' : "dark:text-white text-black"}  opacity-0`}
-                        >
-                            {word}{" "}
-                        </motion.span>
+                        <span key={word + idx}>
+                            {word.split("").map((letter, letterIdx) => (
+                                <span
+                                    key={letter + letterIdx}
+                                    className={`${randomColor()
+                                        } text-[40px] md:text-[60px] lg:text-[70px] scale-letter`}
+                                >
+                                    {letter}
+                                </span>
+                            ))}
+                            {" "}
+                        </span>
                     );
-                })
-                }
-            </motion.div >
+                })}
+            </div>
         );
     };
 
     return (
         <div className={cn("font-bold", className)}>
             <div className="my-4">
-                <div className=" dark:text-white text-black  leading-snug tracking-wide">
+                <div className="dark:text-white text-black leading-snug tracking-wide">
                     {renderWords()}
                 </div>
             </div>
