@@ -97,12 +97,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(-90deg, #804dee 0%, rgba(156, 127, 219, 0) 100%); /* Gradient color */
-  border-radius: 2px; 
+  background: linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(156, 127, 219, 0) 100%
+  ); /* Gradient color */
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(-90deg, #804dee 0%, rgba(180, 155, 235, 0) 100%) /* Darker gradient on hover */
+  background: linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(180, 155, 235, 0) 100%
+  ); /* Darker gradient on hover */
 }
 
 ::-webkit-scrollbar-track {
@@ -199,20 +207,16 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
 /* Apply transition to each letter */
 .scale-letter {
   display: inline-block;
+  transform: scale(1.3);
+  letter-spacing: 0.2em;
   transition: transform 0.4s ease-in-out, letter-spacing 0.2s ease-in-out;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-  /* Adjust line-height to make the text a little taller */
 }
 
 /* On hover, scale the letter up and change letter spacing */
 .scale-letter:hover {
-  transform: scale(1.4);
-  letter-spacing: 0.2em;
+  transform: scale(1.6);
+  letter-spacing: 0.6em;
 }
