@@ -220,3 +220,32 @@
   transform: scale(1.6);
   letter-spacing: 0.6em;
 }
+
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-scaleEffect {
+  animation: scaleEffect 1s infinite ease-in-out; /* Continuous scaling */
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in; /* Fade-in effect */
+}

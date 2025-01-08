@@ -12,8 +12,8 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
-  title: "Laiba Asif",
-  description: "Software Developer | MERN STACK DEV",
+  title: "Laiba Asif's Portfolio",
+  description: "Modern and Minimalist Portfolio",
 };
 
 export default function RootLayout({

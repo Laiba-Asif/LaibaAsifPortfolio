@@ -7,15 +7,7 @@ import { FaLocationArrow } from 'react-icons/fa'
 import ParticlesContainer from './ParticlesContainer'
 
 const Hero = () => {
-    const [key, setKey] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setKey((prevKey) => prevKey + 1); // Increment the key to force re-render
-        }, 10000); // 10 seconds
-
-        return () => clearInterval(interval); // Cleanup on unmount
-    }, []);
     return (
         <div className="sm:pt-20 sm:pb-12 md:pt-24 md:pb-16 lg:pt-36 lg:pb-20 overflow-hidden" id='home'>
             <div>
@@ -39,12 +31,11 @@ const Hero = () => {
                     <h2 className='uppercase tracking-widest text-xs text-center text-blue-100'>Dynamic Web Magic with 2.0 and AI </h2>
 
                     <TextGenerateEffect
-                        key={key} // Use the key prop to trigger re-render
                         className="text-center text-5xl lg:text-8xl font-anton"
                         words="LAiBA ASiF"
                     />
 
-                    <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl capitalize'> A Full Stack software developer based in Pakistan.</p>
+                    <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl capitalize'> A Full Stack software developer based in Pakistan</p>
                     <a href="#projects">
                         <MagicButton
                             title="Show my work"

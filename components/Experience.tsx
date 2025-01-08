@@ -6,7 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const Experience = () => {
     return (
-        <div className="py-10 w-full container" id="experience">
+        <div className="py-10 w-full" id="experience">
             <h1 className="heading">
                 Work <span className="text-purple">Experience</span>
             </h1>
