@@ -1,6 +1,3 @@
-import { toNamespacedPath } from "path";
-
-
 
 export const gridItems = [
   {
@@ -286,7 +283,7 @@ export const workExperience = [
   {
     title: "React.js Developer",
     company_name: "2nd Place",
-    icon: '/company/2ndplace(2).png',
+    icon: '/company/2ndplace.png',
     iconBg: "#E6DEDD",
     date: "March 2020 - April 2021",
     points: [

@@ -3,6 +3,7 @@ import React from 'react';
 import { workExperience } from '@/data';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import Image from 'next/image';
 
 const Experience = () => {
     return (
@@ -10,7 +11,7 @@ const Experience = () => {
             <h1 className="heading">
                 Work <span className="text-purple">Experience</span>
             </h1>
-            <div className="mt-20 flex flex-col">
+            <div className="mt-20 flex flex-col items-center justify-center">
                 <VerticalTimeline>
                     {workExperience.map((experience, index) => (
                         <VerticalTimelineElement key={index}
@@ -20,7 +21,7 @@ const Experience = () => {
                             iconStyle={{ background: experience.iconBg }}
                             icon={
                                 <div className='flex justify-center items-center w-full h-full'>
-                                    <img src={experience.icon} alt={experience.company_name} className='w-[60%] h-[60%] object-contain' />
+                                    <Image src={experience.icon} alt={experience.company_name} className='w-[60%] h-[60%] object-contain' width={24} height={24} />
                                 </div>
                             }
                         >
