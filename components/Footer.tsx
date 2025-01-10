@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className='w-full py-10 mb-[100px] md:mb-5 container' id='contact'>
+        <footer className='w-full py-10 md:mb-5 md:container' id='contact'>
             <div className='w-full absolute left-0 md:-bottom-72 min-h-90'>
                 <img src="/footer-grid.svg" alt="grid" className="w-full h-full opacity-50" />
             </div>

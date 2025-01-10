@@ -249,3 +249,9 @@
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-in; /* Fade-in effect */
 }
+
+
+
+.vertical-timeline{
+  margin: 0 !important;
+}

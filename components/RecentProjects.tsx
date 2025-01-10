@@ -4,13 +4,10 @@ import { myProjects } from '@/data'
 import { fadeIn } from '@/data/motion'
 import { motion } from 'framer-motion'
 import { Tilt } from 'react-tilt'
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
 
 const RecentProjects = () => {
-    console.log(myProjects)
     return (
-        <div className='py-20 container' id='projects'>
+        <div className='md:py-20 md:container' id='projects'>
             <h1 className="heading">
                 A small selection of {''}
                 <span className='text-purple'>Recent Projects</span>
@@ -63,15 +60,25 @@ const RecentProjects = () => {
 
                                                 <div className="relative group">
                                                     <p className="mt-2 text-white-200 text-[14px]">
-                                                        {project.des.length > 120 ? project.des.slice(0, 120) + "..." : project.des}
+
+                                                        <span className="hidden lg:inline">
+                                                            {project.des.length > 120 ? project.des.slice(0, 120) + "..." : project.des}
+                                                        </span>
+                                                        <span className="inline lg:hidden">{project.des}</span>
                                                     </p>
                                                     {project.des.length > 120 && (
-                                                        <>
-                                                            <div className="absolute left-1/2 top-full z-50 w-72 p-4 text-sm text-white bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 bg-opacity-70 backdp-blur-md rounded-lg shadow-xl transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition-opacity duration-300 ease-in-out text-center">
-                                                                {project.des}
-                                                            </div>
-                                                        </>
+                                                        <div
+                                                            className="absolute left-1/2 top-6 z-[9999] w-full p-4 pt-6 text-sm text-white bg-gradient-to-r from-indigo-500/30 via-purple-600 to-indigo-700/20 backdrop-blur-md rounded-lg shadow-xl transform -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 ease-in-out text-center hidden lg:block"
+                                                            style={{
+                                                                clipPath: "polygon(50% -10px, 55% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 45% 0%, 50% -10px)",
+                                                            }}
+                                                        >
+                                                            {project.des}
+                                                        </div>
+
                                                     )}
+
+
                                                 </div>
 
 

@@ -6,7 +6,7 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 const Certification = () => {
     return (
-        <div className="py-10 w-full container">
+        <div className="py-10 w-full md:container">
             <h1 className="heading">
                 My <span className="text-purple">Certification</span>
             </h1>

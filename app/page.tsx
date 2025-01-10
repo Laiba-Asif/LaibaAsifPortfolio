@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { IconBrandDatabricks, IconChartBubbleFilled, IconHome, IconMicroscope, IconUserScreen } from "@tabler/icons-react";
 import Certification from "@/components/Certification";
 import Experience from "@/components/Experience";
+import Cursor from "@/components/Cursor";
 export default function Home() {
   const navItems = [
     { name: "Home", link: "#home", icon: <IconHome /> },
@@ -17,19 +18,22 @@ export default function Home() {
 
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
+    <div>
+      <Cursor />
 
-      <div className="max-w-7xl w-full z-50">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        <Experience />
-        <RecentProjects />
-        <Certification />
-        <Footer />
+      <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
+        <div className="max-w-7xl w-full z-50">
+          <FloatingNav navItems={navItems} />
+          <Hero />
+          <Grid />
+          <Experience />
+          <RecentProjects />
+          <Certification />
+          <Footer />
 
-      </div>
-    </main>
+        </div>
+      </main>
+    </div>
   );
 }
 
