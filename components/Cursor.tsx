@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -17,13 +18,14 @@ const Cursor = () => {
         };
     }, []);
 
-    console.log(position);
 
     return (
         <motion.div
-            className="w-[40px] h-[40px] rounded-full border-[1px] border-white fixed z-[9999] bg-black-200/40"
+            className=" fixed z-[9999] "
             animate={{ x: position.x, y: position.y }}
-        ></motion.div>
+        >
+            <Image src='/cursor/cursor.png' alt="Lock Top" width={60} height={60} className='animate-spin   ' style={{ animationDuration: '3s' }} />
+        </motion.div>
     );
 };
 
